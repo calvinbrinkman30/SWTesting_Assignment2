@@ -9,7 +9,7 @@ def BMI(k, m):
     return round(k/(m**2), 3)
 
 def Categorize(bmi):
-    if bmi < 18.4:
+    if bmi < 18.5:
         return "underweight"
     elif bmi < 25:
         return "normal weight"
