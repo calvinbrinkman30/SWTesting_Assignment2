@@ -26,6 +26,7 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       - run: pip install -U pytest
+      - run: pip install coveralls
       - run:
           name: Run tests
           command: python -m pytest tests.py
