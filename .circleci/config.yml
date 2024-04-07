@@ -12,10 +12,6 @@ orbs:
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   test:
-    docker:
-      # Specify the version you desire here
-      # See: https://circleci.com/developer/images/image/cimg/base
-      - image: cimg/base:current
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
     executor:
@@ -30,8 +26,8 @@ jobs:
       # Checkout the code as the first step.
       - checkout
       # Replace this with a real test runner invocation
-      - python/install-packages:
-          pkg-manager: pip
+      - python/dist
+      - run: pip install -U pytest
       - run:
           name: Run tests
           command: python -m pytest tests.py
