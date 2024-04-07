@@ -29,7 +29,8 @@ jobs:
       - run: pip install coveralls
       - run:
           name: Run tests
-          command: python -m pytest tests.py
+          command: coverage run --source=mypkg -m pytest tests.py
+      - run: coveralls
       - persist_to_workspace:
           root: ~/project
           paths:
