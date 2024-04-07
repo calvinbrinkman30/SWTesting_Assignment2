@@ -27,10 +27,11 @@ jobs:
       - checkout
       - run: pip install -U pytest
       - run: pip install coveralls
+      - run: pip install PyYAML
       - run:
           name: Run tests
           command: coverage run --source=mypkg -m pytest tests.py
-      - run: COVERALLS_REPO_TOKEN=OLrLgMChyQv61P2nDvtKl260bU4OgRDTp coveralls
+      - run: coveralls
       - persist_to_workspace:
           root: ~/project
           paths:
