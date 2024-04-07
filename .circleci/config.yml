@@ -15,7 +15,7 @@ jobs:
     # Specify the execution environment. You can specify an image from Docker Hub or use one of our convenience images from CircleCI's Developer Hub.
     # See: https://circleci.com/docs/executor-intro/ & https://circleci.com/docs/configuration-reference/#executor-job
     executor: python/default
-      tag: '3.11'
+      tag: "3.11"
       # Specify the version you desire here
       # See: https://circleci.com/developer/images/image/cimg/base
 
