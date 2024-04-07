@@ -31,7 +31,7 @@ jobs:
       - run: pip install PyYAML
       - run:
           name: Run tests
-          command: coverage run --source=mypkg -m pytest tests.py
+          command: coverage run -m pytest tests.py
       #- run: coveralls
       - coveralls/upload
       - persist_to_workspace:
