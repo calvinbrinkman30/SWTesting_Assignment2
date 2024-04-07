@@ -30,7 +30,7 @@ jobs:
       - run:
           name: Run tests
           command: coverage run --source=mypkg -m pytest tests.py
-      - run: coveralls
+      - run: COVERALLS_REPO_TOKEN=OLrLgMChyQv61P2nDvtKl260bU4OgRDTp coveralls
       - persist_to_workspace:
           root: ~/project
           paths:
